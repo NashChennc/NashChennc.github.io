@@ -1,3 +1,6 @@
+<?php $doc_id = 2;
+    // require "./patterns/connect/mysql.php";
+?>
 <!doctype html>
 <html>
     <head id= "header">
@@ -5,10 +8,15 @@
         <title>Title</title>
     </head>
     <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
-        <div id="patterns"></div>
+        <?php
+            require "./patterns/page-patterns/head-background.php";
+            require "./patterns/page-patterns/header.php";
+            require "./patterns/page-patterns/main-drawer.php";
+            require "./patterns/page-patterns/fab.php";
+        ?>
+        
         <div class="mdui-container-fluid" style="margin-top: 20px; margin-bottom: 40px;">
             <div class="mdui-container">
-<!--  -->
 <h1>Log</h1>
 <table class="mdui-table">
     <thead></thead>
@@ -25,19 +33,13 @@
         <tr><td>10.9</td> <td>从网上弄的 js/php-markdown 编译器还不如手搓的好用，遂放弃<br/></td></tr>
     </tbody>
 </table>
-<!--  -->
             </div>
         </div>
-        <div id="footer"></div>
+        <?php require "./patterns/page-patterns/footer.php"; ?>
+        <?php require "./patterns/sample-script.php"; ?>
         <script>
             $(function(){
-                $("#header").load("./patterns/sample-header.html")
-                $("#patterns").load("./patterns/page-patterns/head-background.html")
-                $("#patterns").load("./patterns/page-patterns/header.html")
-                $("#patterns").load("./patterns/page-patterns/main-drawer.html")
-                $("#patterns").load("./patterns/page-patterns/fab.html")
-                $("#footer").load("./patterns/page-patterns/footer.html")
-                $("#footer").load("./patterns/sample-footer.html")
+                $("#header").load("./patterns/sample-header.php")
             });
         </script>
     </body>

@@ -1,0 +1,24 @@
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="./patterns/mdui/css/mdui.min.css"/>
+<link rel="stylesheet" href="./patterns/katex/katex.min.css"/>
+<script defer src="./patterns/katex/katex.min.js"></script>
+<script defer src="./patterns/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<!-- <link href="./patterns/katex/contrib/copy-tex.css" rel="stylesheet"/>
+<script src="./patterns/katex/contrib/copy-tex.js"></script> -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ],
+            macros: {
+                // "\\ge": "\\geqslant",
+                // "\\le": "\\leqslant",
+                // "\\geq": "\\geqslant",
+                // "\\leq": "\\leqslant"
+            }
+        });
+    });
+</script>
+<script src="./patterns/markdown.js"></script>
